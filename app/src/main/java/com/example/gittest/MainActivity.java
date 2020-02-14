@@ -6,7 +6,7 @@ import android.os.Bundle;
 
 public class MainActivity extends AppCompatActivity {
 
-    // Documentación inicial de onCreate
+    // TODO: Documentación inicial de onCreate
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
