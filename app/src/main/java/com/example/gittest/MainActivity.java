@@ -6,7 +6,7 @@ import android.os.Bundle;
 
 public class MainActivity extends AppCompatActivity {
 
-    // TODO: Documentación inicial de onCreate la wea mala mala
+    // TODO: Documentación inicial de onCreate la wea mala mala t
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         //solucion
