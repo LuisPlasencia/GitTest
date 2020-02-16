@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">GitTest</string>
+    <string name="valor_actual">0</string>
+    <string name="boton_incrementar">Incrementar</string>
+    <string-array name="ejemplos">
+        <item>hola</item>
+        <item>adios</item>
+        <item>hasta luego</item>
+    </string-array>
 </resources>

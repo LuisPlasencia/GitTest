@@ -4,15 +4,62 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    tools:ignore="ExtraText">
 
-    <TextView
+    <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:src="@drawable/ojo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteY="-53dp" />
+
+    <TextView
+        android:id="@+id/numero"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/valor_actual"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/boton_incrementar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onClickboton_incrementar"
+        android:text="@string/boton_incrementar"
+        app:layout_constraintLeft_toLeftOf="@id/numero"
+        app:layout_constraintRight_toRightOf="@id/numero"
+        app:layout_constraintTop_toBottomOf="@id/numero" />
+
+    <Spinner
+        android:id="@+id/lista"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:entries="@array/ejemplos"
+        app:layout_constraintLeft_toLeftOf="@id/boton_incrementar"
+        app:layout_constraintTop_toBottomOf="@id/boton_incrementar"
+        tools:ignore="MissingConstraints"
+        />
+
+    <TextView
+        android:id="@+id/aviso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="#9B249B"
+        app:layout_constraintBottom_toTopOf="@id/numero"
+        app:layout_constraintLeft_toLeftOf="@id/numero"
+        app:layout_constraintRight_toRightOf="@id/numero"
+        tools:layout_marginBottom="300dp"
+        tools:layout_editor_absoluteY="539dp" />
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
