@@ -2,8 +2,10 @@ package com.example.gittest;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -38,6 +40,15 @@ public class MainActivity extends AppCompatActivity {
         }
         System.out.println(saludo_enString);
         numero.setText(String.valueOf(numero_enInteger));
+
+    }
+
+    public void onClickboton_Enviar(View view) {
+        Intent intent = new Intent(this, RecibirMensaje.class);
+        EditText mensaje = (EditText) findViewById(R.id.mensaje);
+        String mensajeTexto = mensaje.getText().toString();
+        intent.putExtra(RecibirMensaje.RECIBIR, mensajeTexto);
+        startActivity(intent);
 
     }
 }
