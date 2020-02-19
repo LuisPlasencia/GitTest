@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Spinner;
@@ -26,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
         String numero_enString = String.valueOf(numero.getText());
         int numero_enInteger = Integer.parseInt(numero_enString);
         String saludo_enString = String.valueOf(saludo.getSelectedItem());
+
         if(saludo_enString.equals("hola")){
             if (numero_enInteger < 9) {
                 numero_enInteger++;
@@ -38,7 +40,8 @@ public class MainActivity extends AppCompatActivity {
         } else{
             aviso.setText("has seleccionado: " + String.valueOf(saludo.getSelectedItem()) + "\n" +  "debes seleccionado -hola- wei!");
         }
-        System.out.println(saludo_enString);
+        Log.d("Incrementa",saludo_enString);   // esto es lo mismo que un system.out pero bien hecho con tag para saber de que se trata
+    //  System.out.println(saludo_enString);
         numero.setText(String.valueOf(numero_enInteger));
 
     }
